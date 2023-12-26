@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Random</h1>
+        <select id="image-dropdown">
+            <option value="foto.1.jpg">Image 1</option>
+            <option value="foto.2.jpg">Image 2</option>
+            <option value="foto.3.jpg">Image 3</option>
+        </select>
+        <div class="pup-image">
+            <img src="foto.1.jpg" alt="dokter">
+        </div>
+        <div class="pup-image">
+
+            <img src="foto.2.jpg" alt="Perawat">
+        </div>
+        <div class="pup-image">
+            <img src="foto.3.jpg" alt="Pasien">
+        </div>
+    </div>
+    <script>
+        document.getElementById('image-dropdown').onchange = function () {
+            const selectedImage = this.value;
+            document.querySelector('.pup-image img').src = selectedImage;
+        };
+
+    </script>
+</body>
+
+</html>
